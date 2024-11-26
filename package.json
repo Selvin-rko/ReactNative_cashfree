@@ -2,6 +2,7 @@
   "name": "TestReactNative_app",
   "version": "0.0.1",
   "private": true,
+  "main": "index.js",
   "scripts": {
     "android": "react-native run-android",
     "ios": "react-native run-ios",
@@ -10,8 +11,10 @@
     "test": "jest"
   },
   "dependencies": {
+    "cashfree-pg": "^4.2.3",
     "react": "18.3.1",
-    "react-native": "0.75.4"
+    "react-native": "0.75.4",
+    "react-native-cashfree-pg-sdk": "^2.1.17"
   },
   "devDependencies": {
     "@babel/core": "^7.20.0",
