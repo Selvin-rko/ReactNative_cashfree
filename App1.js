@@ -3,10 +3,13 @@ import { Alert, SafeAreaView, Text, Button, StyleSheet, TextInput } from 'react-
 
 // import { CFPaymentGatewayService } from 'react-native-cashfree-pg-sdk';
 
-import { CFPaymentGatewayService } from 'react-native-cashfree-pg-api';
+import {
+    CFErrorResponse,
+    CFPaymentGatewayService,
+  } from 'react-native-cashfree-pg-sdk';
 
 import { CFSession, CFThemeBuilder, CFEnvironment, CFUPIIntentCheckoutPayment } from 'cashfree-pg-api-contract';
-cle
+
 const App1 = ({ 
     orderAmount, 
     currency, 
@@ -172,7 +175,7 @@ export default class App extends Component {
         };
 
         try {
-            const response = await fetch('http://192.168.100.112:3000/create-order', {
+            const response = await fetch('http://192.168.0.241:3000/create-order', {
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/json',
